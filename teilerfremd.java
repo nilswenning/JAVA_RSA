@@ -38,5 +38,13 @@ public class teilerfremd {
     return zweiteZahl;
   }
 
+  public boolean prüf(int z1,int z2){
+    if (ggt(z1,z2) == 1) {
+      return true;
+    } // end of if
+    else {
+      return false;
+    } // end of if-else
+    } 
   // Ende Methoden
 } // end of teilerfremd

@@ -34,6 +34,7 @@ public class GUI extends JFrame {
   int prim2 = 0;
   int n= 0;
   int x=0;
+  int r = 0;
   // Ende Attribute
   
   public GUI(String title) { 
@@ -109,6 +110,7 @@ public class GUI extends JFrame {
   
   // Anfang Methoden
   public void bt_ver_ActionPerformed(ActionEvent evt) {
+    bt_create_ActionPerformed(evt);
     System.out.println(ver.ver());
   } // end of bt_ver_ActionPerformed
 
@@ -117,7 +119,6 @@ public class GUI extends JFrame {
   } // end of bt_ent_ActionPerformed
 
   public void bt_create_ActionPerformed(ActionEvent evt) {
-    System.out.println((int)(Math.random()*20));
     if (tf_prim1.getText().isEmpty()) {
       prim1 = primi.prim1();
       tf_prim1.setInt(prim1);
@@ -130,13 +131,25 @@ public class GUI extends JFrame {
       tf_prim2.setInt(prim2);
     } // end of if  
     else {
-      prim2 = tf_prim1.getInt();
+      prim2 = tf_prim2.getInt();
     } // end of if-else
     n= (prim1)*(prim2);
     jl_n.setText("n = " + n);
     x=(prim1-1)*(prim2-1);
     jl_x.setText("x = " + x);
-    tf_r.setInt(teil.getr(x));
+    if (tf_r.getText().isEmpty()) {
+      r = teil.getr(x);
+      tf_r.setInt(r);
+    } // end of if  
+    else {
+      if (teil.prüf(x,tf_r.getInt())) {
+      r = tf_r.getInt();
+      } // end of if
+    else {
+      tf_r.setText("error");  
+    } // end of if-else
+    } // end of if-else
+    
   } // end of bt_create_ActionPerformed
 
   // Ende Methoden

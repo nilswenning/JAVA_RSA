@@ -94,12 +94,11 @@ public class prim {
   public int prim1() {
     int tp = (int)(Math.random()*1036);
     System.out.println("tp1 = " + tp); 
-    random = array[tp];
-    return random;
+    random = tp;
+    return array[tp];
   }
 
   public int prim2() {
-   System.out.println(random);           // error  random number not transfered 
     int tp =  ((random)-10)+((int)(Math.random()*20));
     System.out.println("tp2 = " + tp); 
     int temp = array[tp];
