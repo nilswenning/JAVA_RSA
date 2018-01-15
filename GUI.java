@@ -148,7 +148,7 @@ public class GUI extends JFrame {
     else {
       tf_r.setText("error");  
     } // end of if-else
-    } // end of if-else
+    } // end of if-else    
     
   } // end of bt_create_ActionPerformed
 
