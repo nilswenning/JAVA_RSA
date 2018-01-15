@@ -14,13 +14,17 @@ public class verschluesselung {
   private int r;
   // Ende Attribute
   
-  public verschluesselung(int m, int n, int r) {
-    this.m = m;
-    this.n = n;
-    this.r = r;
+  public verschluesselung() {
+    this.r = 0;
+    this.n = 0;
+    this.m = 0;
   }
 
   // Anfang Methoden
+
+  public int ver() {
+    return 0;
+  }
 
   // Ende Methoden
 } // end of verschluesselung

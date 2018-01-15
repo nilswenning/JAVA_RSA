@@ -26,8 +26,14 @@ public class GUI extends JFrame {
   private JNumberField tf_prim2 = new JNumberField();
   prim primi = new prim();   
   teilerfremd teil = new teilerfremd();
+  verschluesselung ver = new verschluesselung();
   private JLabel jl_n = new JLabel();
   private JLabel jl_x = new JLabel();
+  private JButton bt_create = new JButton();
+  int prim1 = 0;
+  int prim2 = 0;
+  int n= 0;
+  int x=0;
   // Ende Attribute
   
   public GUI(String title) { 
@@ -87,6 +93,15 @@ public class GUI extends JFrame {
     jl_x.setBounds(264, 128, 147, 33);
     jl_x.setText("x = ");
     cp.add(jl_x);
+    bt_create.setBounds(440, 120, 145, 41);
+    bt_create.setText("Create");
+    bt_create.setMargin(new Insets(2, 2, 2, 2));
+    bt_create.addActionListener(new ActionListener() { 
+      public void actionPerformed(ActionEvent evt) { 
+        bt_create_ActionPerformed(evt);
+      }
+    });
+    cp.add(bt_create);
     // Ende Komponenten
     
     setVisible(true);
@@ -94,20 +109,35 @@ public class GUI extends JFrame {
   
   // Anfang Methoden
   public void bt_ver_ActionPerformed(ActionEvent evt) {
-    int prim1 = primi.prim1();
-    int prim2 = primi.prim2();
-    tf_prim1.setInt(prim1);
-    tf_prim2.setInt(prim2);
-    int n= (prim1)*(prim2);
-    jl_n.setText("n = " + n);
-    int x=(prim1-1)*(prim2-1);
-    jl_x.setText("x = " + x);
-    tf_r.setInt(teil.getr(x));
+    System.out.println(ver.ver());
   } // end of bt_ver_ActionPerformed
 
   public void bt_ent_ActionPerformed(ActionEvent evt) {
     // TODO hier Quelltext einfügen
   } // end of bt_ent_ActionPerformed
+
+  public void bt_create_ActionPerformed(ActionEvent evt) {
+    System.out.println((int)(Math.random()*20));
+    if (tf_prim1.getText().isEmpty()) {
+      prim1 = primi.prim1();
+      tf_prim1.setInt(prim1);
+    } // end of if
+    else {
+      prim1 = tf_prim1.getInt();
+    } // end of if-else
+    if (tf_prim2.getText().isEmpty()) {
+      prim2 = primi.prim2();
+      tf_prim2.setInt(prim2);
+    } // end of if  
+    else {
+      prim2 = tf_prim1.getInt();
+    } // end of if-else
+    n= (prim1)*(prim2);
+    jl_n.setText("n = " + n);
+    x=(prim1-1)*(prim2-1);
+    jl_x.setText("x = " + x);
+    tf_r.setInt(teil.getr(x));
+  } // end of bt_create_ActionPerformed
 
   // Ende Methoden
   
