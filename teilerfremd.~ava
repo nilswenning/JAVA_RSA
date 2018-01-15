@@ -17,7 +17,7 @@ public class teilerfremd {
   }
 
   // Anfang Methoden
-   private int ggt(int zahl1, int zahl2) {
+   private static int ggt(int zahl1, int zahl2) {
    while (zahl2 != 0) {
      if (zahl1 > zahl2) {
        zahl1 = zahl1 - zahl2;
@@ -28,14 +28,15 @@ public class teilerfremd {
    return zahl1;
  }
  
-  public int getr(int x) {
-    int zweiteZahl  = (int)(Math.random()*(x/4));
-    int ergebnis = ggt(x, zweiteZahl);
-    while (ergebnis != 1) { 
-    zweiteZahl  = (int)(Math.random()*(x)); 
-    ergebnis = ggt(x, zweiteZahl);  
-    } // end of while
-    return zweiteZahl;
+  private static int getr(int ersteZahl) {
+ 
+   // berechne ggT mit der Funktion "ggt()"
+   int ergebnis = ggt(ersteZahl, zweiteZahl);
+ 
+   // Ausgabe des Ergebnisses:
+   System.out.println("Der ggT von "  + ersteZahl + 
+       " und " + zweiteZahl + " ist: " + ergebnis);
+    return 0;
   }
 
   // Ende Methoden

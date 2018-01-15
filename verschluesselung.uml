@@ -2,12 +2,13 @@
 File0=eea.java
 File1=entschluesselung.java
 File2=GUI.java
-File3=teilerfremd.java
-File4=verschluesselung.java
+File3=prim.java
+File4=teilerfremd.java
+File5=verschluesselung.java
 
 [Box:  - eea]
-X=569
-Y=153
+X=561
+Y=191
 MinVis=0
 ShowParameter=4
 SortOrder=0
@@ -16,8 +17,8 @@ FontSize=10
 FontName=MS Sans Serif
 
 [Box:  - entschluesselung]
-X=306
-Y=156
+X=309
+Y=195
 MinVis=0
 ShowParameter=4
 SortOrder=0
@@ -28,6 +29,16 @@ FontName=MS Sans Serif
 [Box:  - GUI]
 X=20
 Y=40
+MinVis=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=0
+FontSize=10
+FontName=MS Sans Serif
+
+[Box:  - prim]
+X=753
+Y=50
 MinVis=0
 ShowParameter=4
 SortOrder=0
@@ -67,6 +78,10 @@ ShowConnections=0
 Fontname=MS Sans Serif
 Fontsize=10
 ShowObjectDiagram=0
+
+[Connections]
+V0=GUI#prim#AssociationDirected####0#0#0
+V1=GUI#teilerfremd#AssociationDirected####0#0#0
 
 [Interactive]
 I0=

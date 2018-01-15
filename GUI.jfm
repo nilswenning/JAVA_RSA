@@ -1,6 +1,6 @@
 object GUI: TFGUIForm
-  Left = 772
-  Top = 125
+  Left = 816
+  Top = 99
   BorderIcons = [biSystemMenu]
   Caption = 'GUI'
   ClientHeight = 423
@@ -246,5 +246,51 @@ object GUI: TFGUIForm
     Background = clWhite
     HorizontalAlignment = LEFT
     Editable = True
+  end
+  object jl_n: TJLabel
+    Tag = 1
+    Left = 48
+    Top = 128
+    Width = 147
+    Height = 33
+    Hint = 'jLabel1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = [fsBold]
+    Foreground = 3355443
+    Background = clBtnFace
+    Text = 'n = '
+    HorizontalAlignment = LEFT
+    VerticalAlignment = CENTER
+    HorizontalTextPosition = RIGHT
+    VerticalTextPosition = CENTER
+    IconTextGap = 4
+    DisplayedMnemonic = 0
+    DisplayedMnemonicIndex = 0
+  end
+  object jl_x: TJLabel
+    Tag = 1
+    Left = 264
+    Top = 128
+    Width = 147
+    Height = 33
+    Hint = 'jLabel1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = [fsBold]
+    Foreground = 3355443
+    Background = clBtnFace
+    Text = 'x = '
+    HorizontalAlignment = LEFT
+    VerticalAlignment = CENTER
+    HorizontalTextPosition = RIGHT
+    VerticalTextPosition = CENTER
+    IconTextGap = 4
+    DisplayedMnemonic = 0
+    DisplayedMnemonicIndex = 0
   end
 end

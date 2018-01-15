@@ -24,6 +24,10 @@ public class GUI extends JFrame {
   private JNumberField tf_prim1 = new JNumberField();
   private JNumberField tf_r = new JNumberField();
   private JNumberField tf_prim2 = new JNumberField();
+  prim primi = new prim();   
+  teilerfremd teil = new teilerfremd();
+  private JLabel jl_n = new JLabel();
+  private JLabel jl_x = new JLabel();
   // Ende Attribute
   
   public GUI(String title) { 
@@ -77,6 +81,12 @@ public class GUI extends JFrame {
     tf_prim2.setBounds(264, 72, 145, 41);
     tf_prim2.setText("");
     cp.add(tf_prim2);
+    jl_n.setBounds(48, 128, 147, 33);
+    jl_n.setText("n = ");
+    cp.add(jl_n);
+    jl_x.setBounds(264, 128, 147, 33);
+    jl_x.setText("x = ");
+    cp.add(jl_x);
     // Ende Komponenten
     
     setVisible(true);
@@ -84,7 +94,15 @@ public class GUI extends JFrame {
   
   // Anfang Methoden
   public void bt_ver_ActionPerformed(ActionEvent evt) {
-    // TODO hier Quelltext einfügen
+    int prim1 = primi.prim1();
+    int prim2 = primi.prim2();
+    tf_prim1.setInt(prim1);
+    tf_prim2.setInt(prim2);
+    int n= (prim1)*(prim2);
+    jl_n.setText("n = " + n);
+    int x=(prim1-1)*(prim2-1);
+    jl_x.setText("x = " + x);
+    tf_r.setInt(teil.getr(x));
   } // end of bt_ver_ActionPerformed
 
   public void bt_ent_ActionPerformed(ActionEvent evt) {
